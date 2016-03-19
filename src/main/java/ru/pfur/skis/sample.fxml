@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="737.0" prefWidth="623.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.pfur.skis.Controller">
+    <children>
+        <ComboBox fx:id="tSection" layoutX="460.0" layoutY="20.0" prefHeight="30.0" prefWidth="140.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+        </ComboBox>
+        <Pane layoutX="14.0" layoutY="20.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: blue;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="20.0" />
+        <Label layoutX="367.0" layoutY="27.0" prefHeight="30.0" prefWidth="100.0" text="type of section" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="20.0" />
+        <Label layoutX="381.0" layoutY="101.0" prefHeight="30.0" prefWidth="100.0" text="steel " AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="100.0" />
+        <ComboBox layoutX="491.0" layoutY="101.0" prefHeight="30.0" prefWidth="140.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="100.0" />
+        <Label layoutX="381.0" layoutY="141.0" prefHeight="30.0" prefWidth="100.0" text="concrete" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="140.0" />
+        <ComboBox layoutX="491.0" layoutY="141.0" prefHeight="30.0" prefWidth="140.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="140.0" />
+        <Label layoutX="381.0" layoutY="181.0" prefHeight="30.0" prefWidth="100.0" text="rebars" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="180.0" />
+        <ComboBox layoutX="491.0" layoutY="181.0" prefHeight="30.0" prefWidth="140.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="180.0" />
+        <TitledPane collapsible="false" layoutX="379.0" layoutY="218.0" prefHeight="170.0" prefWidth="250.0" text="loads" AnchorPane.rightAnchor="18.0">
+            <content>
+                <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="250.0">
+                    <children>
+                        <TextField layoutX="104.0" layoutY="9.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="2.0" />
+                        <Label layoutX="40.0" layoutY="12.0" prefHeight="30.0" prefWidth="50.0" text="кратковремен" AnchorPane.rightAnchor="160.0" AnchorPane.topAnchor="2.0" />
+                        <Label layoutX="11.0" layoutY="52.0" prefHeight="30.0" prefWidth="50.0" text="кратковремен" AnchorPane.rightAnchor="160.0" AnchorPane.topAnchor="42.0" />
+                        <TextField layoutX="153.0" layoutY="52.0" prefHeight="30.0" prefWidth="100.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="42.0" />
+                        <Label layoutX="11.0" layoutY="82.0" prefHeight="30.0" prefWidth="50.0" text="кратковремен" AnchorPane.rightAnchor="160.0" AnchorPane.topAnchor="82.0" />
+                        <TextField layoutX="161.0" layoutY="104.0" prefHeight="30.0" prefWidth="100.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="82.0" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </TitledPane>
+        <ComboBox layoutX="490.0" layoutY="58.0" prefHeight="30.0" prefWidth="140.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="60.0" />
+        <Label layoutX="380.0" layoutY="58.0" prefHeight="30.0" prefWidth="100.0" text="cross section" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="60.0" />
+        <Button fx:id="calculate" layoutX="527.0" layoutY="687.0" mnemonicParsing="false" prefHeight="30.0" text="Calculate" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="687.0" />
+        <TitledPane collapsible="false" layoutX="353.0" layoutY="396.0" prefHeight="170.0" prefWidth="250.0" text="loads" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="396.0">
+            <content>
+                <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="250.0">
+                    <children>
+                        <TextField layoutX="104.0" layoutY="9.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="2.0" />
+                        <Label layoutX="40.0" layoutY="12.0" prefHeight="30.0" prefWidth="50.0" text="кратковремен" AnchorPane.rightAnchor="160.0" AnchorPane.topAnchor="2.0" />
+                        <Label layoutX="11.0" layoutY="52.0" prefHeight="30.0" prefWidth="50.0" text="кратковремен" AnchorPane.rightAnchor="160.0" AnchorPane.topAnchor="42.0" />
+                        <TextField layoutX="153.0" layoutY="52.0" prefHeight="30.0" prefWidth="100.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="42.0" />
+                        <Label layoutX="11.0" layoutY="82.0" prefHeight="30.0" prefWidth="50.0" text="кратковремен" AnchorPane.rightAnchor="160.0" AnchorPane.topAnchor="82.0" />
+                        <TextField layoutX="161.0" layoutY="104.0" prefHeight="30.0" prefWidth="100.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="82.0" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </TitledPane>
+        <Button layoutX="441.0" layoutY="687.0" mnemonicParsing="false" prefHeight="30.0" text="Raduga" />
+        <Button layoutX="353.0" layoutY="687.0" mnemonicParsing="false" prefHeight="30.0" text="Sheme" />
+    </children>
+</AnchorPane>
