@@ -13,6 +13,15 @@ public class Controller implements Initializable {
 
     @FXML
     ComboBox<String> tSection;
+    @FXML
+    ComboBox<String> cSection;
+    @FXML
+    ComboBox<String> steel;
+    @FXML
+    ComboBox<String> concrete;
+    @FXML
+    ComboBox<String> rebars;
+
 
     @FXML
     Button calculate;
@@ -27,6 +36,19 @@ public class Controller implements Initializable {
         tSection.getItems().add("String 1");
         tSection.getItems().add("String 2");
         tSection.getItems().add("String 3");
+
+        cSection.getItems().add("Circle 1");
+        cSection.getItems().add("Circle 2");
+
+        steel.getItems().add("A400");
+        steel.getItems().add("A240");
+
+        concrete.getItems().add("B60");
+        concrete.getItems().add("B55");
+        concrete.getItems().add("B50");
+
+        rebars.getItems().add("A400");
+        rebars.getItems().add("A240");
 
         calculate.setOnAction((ActionEvent e)-> System.out.println("clicked"));
     }
