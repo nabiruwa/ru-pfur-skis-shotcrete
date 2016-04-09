@@ -14,8 +14,6 @@ public class Controller implements Initializable {
     @FXML
     ComboBox<String> tSection;
     @FXML
-    ComboBox<String> cSection;
-    @FXML
     ComboBox<String> steel;
     @FXML
     ComboBox<String> concrete;
@@ -37,8 +35,6 @@ public class Controller implements Initializable {
         tSection.getItems().add("String 2");
         tSection.getItems().add("String 3");
 
-        cSection.getItems().add("Circle 1");
-        cSection.getItems().add("Circle 2");
 
         steel.getItems().add("A400");
         steel.getItems().add("A240");

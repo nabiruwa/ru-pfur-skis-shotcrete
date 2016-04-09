@@ -8,15 +8,13 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="737.0" prefWidth="623.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.pfur.skis.Controller">
     <children>
-        <ComboBox fx:id="tSection" layoutX="460.0" layoutY="20.0" prefHeight="30.0" prefWidth="140.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
-        </ComboBox>
         <Pane layoutX="14.0" layoutY="20.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: blue;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="20.0" />
-        <Label layoutX="367.0" layoutY="27.0" prefHeight="30.0" prefWidth="100.0" text="type of section" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="20.0" />
+        <Label layoutX="353.0" layoutY="60.0" prefHeight="30.0" prefWidth="100.0" text="type of section" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="60.0" />
         <Label layoutX="381.0" layoutY="101.0" prefHeight="30.0" prefWidth="100.0" text="steel " AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="100.0" />
         <ComboBox fx:id="steel" layoutX="491.0" layoutY="101.0" prefHeight="30.0" prefWidth="140.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="100.0" />
-        <Label layoutX="381.0" layoutY="141.0" prefHeight="30.0" prefWidth="100.0" text="concrete" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="140.0" />
+        <Label layoutX="353.0" layoutY="140.0" prefHeight="30.0" prefWidth="100.0" text="concrete" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="140.0" />
         <ComboBox fx:id="concrete" layoutX="491.0" layoutY="141.0" prefHeight="30.0" prefWidth="140.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="140.0" />
-        <Label layoutX="381.0" layoutY="181.0" prefHeight="30.0" prefWidth="100.0" text="rebars" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="180.0" />
+        <Label layoutX="353.0" layoutY="180.0" prefHeight="30.0" prefWidth="100.0" text="rebars" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="180.0" />
         <ComboBox fx:id="rebars" layoutX="463.0" layoutY="180.0" prefHeight="30.0" prefWidth="140.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="180.0" />
         <TitledPane fx:id="Loads" collapsible="false" layoutX="348.0" layoutY="336.0" prefHeight="170.0" prefWidth="250.0" text="loads" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="340.0">
             <content>
@@ -32,14 +30,13 @@
                 </AnchorPane>
             </content>
         </TitledPane>
-        <ComboBox fx:id="cSection" layoutX="463.0" layoutY="60.0" prefHeight="30.0" prefWidth="140.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="60.0" />
-        <Label layoutX="380.0" layoutY="58.0" prefHeight="30.0" prefWidth="100.0" text="cross section" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="60.0" />
-        <Button fx:id="calculate" layoutX="527.0" layoutY="687.0" mnemonicParsing="false" prefHeight="30.0" text="Calculate" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="687.0" />
-        <Button layoutX="441.0" layoutY="687.0" mnemonicParsing="false" prefHeight="30.0" text="Raduga" />
-        <Button layoutX="353.0" layoutY="687.0" mnemonicParsing="false" prefHeight="30.0" text="Scheme" />
-      <Label layoutX="353.0" layoutY="219.0" prefHeight="30.0" prefWidth="100.0" text="Is(inert.modul)" />
-      <Label layoutX="353.0" layoutY="256.0" prefHeight="30.0" prefWidth="100.0" text="Ib(iner.modul beton)" />
-      <Label layoutX="353.0" layoutY="296.0" prefHeight="30.0" prefWidth="100.0" text="Modul deform" />
+        <ComboBox fx:id="tSection" layoutX="463.0" layoutY="60.0" prefHeight="30.0" prefWidth="140.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="60.0" />
+        <Button fx:id="calculate" layoutX="527.0" layoutY="687.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Calculate" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+        <Button layoutX="429.0" layoutY="690.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Raduga" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="110.0" />
+        <Button layoutX="336.0" layoutY="690.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Scheme" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="200.0" />
+      <Label layoutX="353.0" layoutY="219.0" prefHeight="30.0" prefWidth="100.0" text="Is(inert.modul)" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="300.0" />
+      <Label layoutX="353.0" layoutY="256.0" prefHeight="30.0" prefWidth="100.0" text="Ib(iner.modul beton)" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="260.0" />
+      <Label layoutX="353.0" layoutY="220.0" prefHeight="30.0" prefWidth="100.0" text="Modul deform" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="220.0" />
       <TextField editable="false" layoutX="463.0" layoutY="219.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="140.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="220.0" />
       <TextField editable="false" layoutX="463.0" layoutY="256.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="140.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="260.0" />
       <TextField editable="false" layoutX="473.0" layoutY="266.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="140.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="300.0" />
