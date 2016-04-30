@@ -1,10 +1,14 @@
 package ru.pfur.skis;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.canvas.Canvas;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.input.ZoomEvent;
+import javafx.scene.layout.Pane;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -12,13 +16,15 @@ import java.util.ResourceBundle;
 public class Controller implements Initializable {
 
     @FXML
-    ComboBox<String> tSection;
-    @FXML
     ComboBox<String> steel;
     @FXML
     ComboBox<String> concrete;
     @FXML
     ComboBox<String> rebars;
+    @FXML
+    Pane drawPanel;
+
+    Canvas canvas = new Canvas(400,400);
 
 
     @FXML
@@ -30,21 +36,24 @@ public class Controller implements Initializable {
     }
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        assert tSection != null : "fx:id=\"fruitCombo\" was not injected: check your FXML file 'fruitcombo.fxml'.";
-        tSection.getItems().add("String 1");
-        tSection.getItems().add("String 2");
-        tSection.getItems().add("String 3");
+        assert steel != null : "fx:id=\"steel\" was not injected: check your FXML file 'main.fxml'.";
+        assert concrete != null : "fx:id=\"concrete\" was not injected: check your FXML file 'main.fxml'.";
+        assert rebars != null : "fx:id=\"rebars\" was not injected: check your FXML file 'main.fxml'.";
 
+        for (String steelElement : Model.getSteels()){
+            steel.getItems().add(steelElement);
+            rebars.getItems().add(steelElement);
+        }
 
-        steel.getItems().add("A400");
-        steel.getItems().add("A240");
+        for (String concreteElement : Model.getConcretes()){
+            concrete.getItems().add(concreteElement);
+        }
 
-        concrete.getItems().add("B60");
-        concrete.getItems().add("B55");
-        concrete.getItems().add("B50");
+        drawPanel.getChildren().add(canvas);
 
-        rebars.getItems().add("A400");
-        rebars.getItems().add("A240");
+        canvas.getGraphicsContext2D().strokeOval(100,100,100,100);
+        canvas.getGraphicsContext2D().strokeRect(1,1,700,700);
+
 
         calculate.setOnAction((ActionEvent e)-> System.out.println("clicked"));
     }
