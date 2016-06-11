@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="898.0" prefWidth="974.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.pfur.skis.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1140.0" prefWidth="1154.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.pfur.skis.Controller">
     <children>
         <Pane fx:id="drawPanel" layoutX="14.0" layoutY="20.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="20.0" />
         <Label layoutX="353.0" layoutY="26.0" prefHeight="30.0" prefWidth="100.0" text="D pipe" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="20.0" />
@@ -17,65 +17,48 @@
         <ComboBox fx:id="steel" layoutX="463.0" layoutY="66.0" prefHeight="30.0" prefWidth="140.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="100.0" />
         <Label layoutX="353.0" layoutY="106.0" prefHeight="30.0" prefWidth="100.0" text="concrete" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="140.0" />
         <ComboBox fx:id="concrete" layoutX="463.0" layoutY="106.0" prefHeight="30.0" prefWidth="140.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="140.0" />
-        <Label layoutX="353.0" layoutY="146.0" prefHeight="30.0" prefWidth="100.0" text="rebars" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="180.0" />
-        <ComboBox fx:id="rebars" layoutX="463.0" layoutY="146.0" prefHeight="30.0" prefWidth="140.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="180.0" />
-        <TitledPane fx:id="Loads" collapsible="false" layoutX="347.0" layoutY="476.0" prefHeight="170.0" prefWidth="250.0" text="loads for column" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="500.0">
+        <Button fx:id="calculate" layoutX="527.0" layoutY="687.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Calculate" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="40.0" />
+        <Button fx:id="draw" layoutX="336.0" layoutY="690.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Scheme" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="160.0" />
+        <Button fx:id="section" layoutX="336.0" layoutY="690.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Scheme" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="120.0" />
+        <Label layoutX="353.0" layoutY="299.0" prefHeight="30.0" prefWidth="100.0" text="t pp" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="220.0" />
+        <TextField fx:id="tPP" editable="true" layoutX="463.0" layoutY="300.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="80.0" text="20" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="220.0" />
+        <Label layoutX="353.0" layoutY="344.0" prefHeight="30.0" prefWidth="100.0" text="d пролета" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="260.0" />
+        <TextField fx:id="dSpan" editable="true" layoutX="453.0" layoutY="354.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="80.0" text="480" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="260.0" />
+        <TitledPane fx:id="Loads1" collapsible="false" layoutX="702.0" layoutY="663.0" prefHeight="170.0" prefWidth="250.0" text="loads" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="300.0">
             <content>
-                <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="250.0">
+                <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="182.0" prefWidth="250.0">
                     <children>
-                        <TextField layoutX="104.0" layoutY="9.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="2.0" />
-                        <Label layoutX="40.0" layoutY="12.0" prefHeight="30.0" prefWidth="50.0" text="кратковремен" AnchorPane.rightAnchor="160.0" AnchorPane.topAnchor="2.0" />
-                        <Label layoutX="11.0" layoutY="52.0" prefHeight="30.0" prefWidth="50.0" text="длит" AnchorPane.rightAnchor="160.0" AnchorPane.topAnchor="42.0" />
-                        <TextField layoutX="153.0" layoutY="52.0" prefHeight="30.0" prefWidth="100.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="42.0" />
-                        <Label layoutX="11.0" layoutY="82.0" prefHeight="30.0" prefWidth="50.0" text="собст" AnchorPane.rightAnchor="160.0" AnchorPane.topAnchor="82.0" />
-                        <TextField layoutX="161.0" layoutY="104.0" prefHeight="30.0" prefWidth="100.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="82.0" />
-                    </children>
-                </AnchorPane>
-            </content>
-        </TitledPane>
-        <Button fx:id="calculate" layoutX="527.0" layoutY="687.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Calculate" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
-        <Button layoutX="429.0" layoutY="690.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Raduga" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="110.0" />
-        <Button layoutX="336.0" layoutY="690.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Scheme" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="200.0" />
-        <Label layoutX="353.0" layoutY="266.0" prefHeight="30.0" prefWidth="100.0" text="Is(inert.modul)" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="300.0" />
-        <Label layoutX="353.0" layoutY="226.0" prefHeight="30.0" prefWidth="100.0" text="Ib(iner.modul beton)" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="260.0" />
-        <Label layoutX="353.0" layoutY="186.0" prefHeight="30.0" prefWidth="100.0" text="Modul deform" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="220.0" />
-        <TextField editable="false" layoutX="463.0" layoutY="186.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="220.0" />
-        <TextField editable="false" layoutX="463.0" layoutY="226.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="260.0" />
-        <TextField editable="false" layoutX="463.0" layoutY="260.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="300.0" />
-        <Label layoutX="353.0" layoutY="299.0" prefHeight="30.0" prefWidth="100.0" text="t pp" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="340.0" />
-        <TextField editable="false" layoutX="463.0" layoutY="300.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="340.0" />
-        <Label layoutX="353.0" layoutY="344.0" prefHeight="30.0" prefWidth="100.0" text="d пролета" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="380.0" />
-        <TextField editable="false" layoutX="453.0" layoutY="354.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="380.0" />
-        <Label layoutX="347.0" layoutY="380.0" prefHeight="30.0" prefWidth="100.0" text="Коэф.Пуас.Бе" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="420.0" />
-        <TextField editable="false" layoutX="463.0" layoutY="380.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="60.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="420.0" />
-        <Label layoutX="353.0" layoutY="422.0" prefHeight="30.0" prefWidth="100.0" text="Коэф.Пуас.Ст" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="460.0" />
-        <TextField editable="false" layoutX="473.0" layoutY="428.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="60.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="460.0" />
-        <TitledPane fx:id="Loads1" collapsible="false" layoutX="702.0" layoutY="663.0" prefHeight="170.0" prefWidth="250.0" text="loads for plate" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="680.0">
-            <content>
-                <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="250.0">
-                    <children>
-                        <TextField layoutX="104.0" layoutY="9.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="2.0" />
-                        <Label layoutX="40.0" layoutY="12.0" prefHeight="30.0" prefWidth="50.0" text="кратковремен" AnchorPane.rightAnchor="160.0" AnchorPane.topAnchor="2.0" />
-                        <Label layoutX="11.0" layoutY="52.0" prefHeight="30.0" prefWidth="50.0" text="длит" AnchorPane.rightAnchor="160.0" AnchorPane.topAnchor="42.0" />
-                        <TextField layoutX="153.0" layoutY="52.0" prefHeight="30.0" prefWidth="100.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="42.0" />
-                        <Label layoutX="11.0" layoutY="82.0" prefHeight="30.0" prefWidth="50.0" text="собст" AnchorPane.rightAnchor="160.0" AnchorPane.topAnchor="82.0" />
-                        <TextField layoutX="161.0" layoutY="104.0" prefHeight="30.0" prefWidth="100.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="82.0" />
+                        <TextField fx:id="shortTermPlate" layoutX="104.0" layoutY="9.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="60.0" text="2.4" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="2.0" />
+                        <Label layoutX="40.0" layoutY="12.0" prefHeight="30.0" prefWidth="80.0" text="shortterm" AnchorPane.rightAnchor="140.0" AnchorPane.topAnchor="2.0" />
+                        <Label layoutX="11.0" layoutY="52.0" prefHeight="30.0" prefWidth="80.0" text="longterm" AnchorPane.rightAnchor="140.0" AnchorPane.topAnchor="42.0" />
+                        <TextField fx:id="longTermPlate" layoutX="153.0" layoutY="52.0" prefHeight="30.0" prefWidth="60.0" text="9.74" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="42.0" />
+                        <Label layoutX="11.0" layoutY="82.0" prefHeight="30.0" prefWidth="80.0" text="selfweight" AnchorPane.rightAnchor="140.0" AnchorPane.topAnchor="82.0" />
+                        <TextField fx:id="selfWeightPlate" layoutX="161.0" layoutY="104.0" prefHeight="30.0" prefWidth="60.0" text="0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="82.0" />
+                  <Label prefHeight="30.0" prefWidth="80.0" text="cover" AnchorPane.rightAnchor="140.0" AnchorPane.topAnchor="122.0" />
+                  <TextField fx:id="cover" prefHeight="30.0" prefWidth="60.0" text="7.3" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="122.0" />
+                  <Label layoutX="174.0" layoutY="14.0" prefHeight="30.0" prefWidth="50.0" text="kN/m2" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="2.0" />
+                  <Label prefHeight="30.0" prefWidth="50.0" text="kN/m2" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="42.0" />
+                  <Label prefHeight="30.0" prefWidth="50.0" text="kN/m2" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="82.0" />
+                  <Label prefHeight="30.0" prefWidth="50.0" text="kN/m2" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="122.0" />
                     </children>
                 </AnchorPane>
             </content>
         </TitledPane>
       <Label layoutX="704.0" layoutY="58.0" prefHeight="30.0" prefWidth="100.0" text="s pipe" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="60.0" />
-      <TextField editable="false" layoutX="808.0" layoutY="30.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="20.0" />
-      <TextField editable="false" layoutX="814.0" layoutY="60.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="60.0" />
-      <Label layoutX="922.0" layoutY="23.0" prefHeight="30.0" prefWidth="50.0" text="mm" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
-      <Label layoutX="904.0" layoutY="60.0" prefHeight="30.0" prefWidth="50.0" text="mm" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="60.0" />
-      <Label layoutX="904.0" layoutY="220.0" prefHeight="30.0" prefWidth="50.0" text="kN/mm" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="220.0" />
-      <Label layoutX="914.0" layoutY="260.0" prefHeight="30.0" prefWidth="50.0" text="mm4" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="260.0" />
-      <Label layoutX="904.0" layoutY="300.0" prefHeight="30.0" prefWidth="50.0" text="mm4" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="300.0" />
-      <Label layoutX="904.0" layoutY="340.0" prefHeight="30.0" prefWidth="50.0" text="mm" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="340.0" />
-      <Label layoutX="904.0" layoutY="380.0" prefHeight="30.0" prefWidth="50.0" text="mm" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="380.0" />
-      <Label layoutX="904.0" layoutY="420.0" prefHeight="30.0" prefWidth="60.0" text="mm/mm" AnchorPane.rightAnchor="20.0" />
-      <Label layoutX="894.0" layoutY="460.0" prefHeight="30.0" prefWidth="60.0" text="mm/mm" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="460.0" />
+      <TextField fx:id="dPipe" layoutX="808.0" layoutY="30.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="80.0" text="53" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="20.0" />
+      <TextField fx:id="sPipe" editable="true" layoutX="814.0" layoutY="60.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="80.0" text="0.9" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="60.0" />
+      <Label layoutX="922.0" layoutY="23.0" prefHeight="30.0" prefWidth="50.0" text="cm" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+      <Label layoutX="904.0" layoutY="60.0" prefHeight="30.0" prefWidth="50.0" text="cm" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="60.0" />
+      <Label layoutX="904.0" layoutY="340.0" prefHeight="30.0" prefWidth="50.0" text="cm" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="220.0" />
+      <Label layoutX="904.0" layoutY="380.0" prefHeight="30.0" prefWidth="50.0" text="cm" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="260.0" />
       <Group />
+      <Label layoutX="704.0" layoutY="181.0" prefHeight="30.0" prefWidth="100.0" text="n floors" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="180.0" />
+      <TextField fx:id="nFloors" editable="true" layoutX="814.0" layoutY="180.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="80.0" text="16" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="180.0" />
+      <Label layoutX="714.0" layoutY="191.0" prefHeight="30.0" prefWidth="100.0" text="h 1 floor" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="530.0" />
+      <TextField fx:id="h1Floors" editable="true" layoutX="824.0" layoutY="190.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="80.0" text="390" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="530.0" />
+      <TextField fx:id="hFloors" editable="true" layoutX="824.0" layoutY="190.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="80.0" text="300" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="570.0" />
+      <Label layoutX="724.0" layoutY="201.0" prefHeight="30.0" prefWidth="100.0" text="h floors" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="570.0" />
+      <Label layoutX="1084.0" layoutY="530.0" prefHeight="30.0" prefWidth="50.0" text="cm" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="530.0" />
+      <Label layoutX="1094.0" layoutY="571.0" prefHeight="30.0" prefWidth="50.0" text="cm" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="570.0" />
     </children>
 </AnchorPane>
